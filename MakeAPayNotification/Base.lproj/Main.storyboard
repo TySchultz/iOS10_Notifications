@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QkF-L6-uAy">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Make a Pay-->
+        <scene sceneID="bqh-zg-2p5">
+            <objects>
+                <viewController id="bXr-AN-bQ4" customClass="MainViewController" customModule="MakeAPayNotification" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7YO-Po-eSi"/>
+                        <viewControllerLayoutGuide type="bottom" id="YHi-5r-X88"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Mr6-K2-Uez">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d39-uu-4TF" customClass="TSButton" customModule="MakeAPayNotification" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="hUi-MR-Y2C"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Launch Notification"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="launchNotificationWithSender:" destination="bXr-AN-bQ4" eventType="touchUpInside" id="Od1-lD-yeF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="d39-uu-4TF" firstAttribute="top" secondItem="7YO-Po-eSi" secondAttribute="bottom" constant="100" id="NOu-jX-wQs"/>
+                            <constraint firstItem="d39-uu-4TF" firstAttribute="leading" secondItem="Mr6-K2-Uez" secondAttribute="leadingMargin" constant="32" id="aQo-Lh-oks"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="d39-uu-4TF" secondAttribute="trailing" constant="32" id="cAw-CQ-BOh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Make a Pay" id="aNe-1i-Zrt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3rh-82-Lbz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1417" y="-417"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sli-5H-LJO">
+            <objects>
+                <navigationController id="QkF-L6-uAy" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aDD-G0-b5S">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="bXr-AN-bQ4" kind="relationship" relationship="rootViewController" id="sih-w5-tJ3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YhK-AW-2iT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="554" y="-418"/>
+        </scene>
+    </scenes>
+</document>
